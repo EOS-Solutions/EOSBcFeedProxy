@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOS Solutions NuGet Feeds</title>
+</head>
+<body>
+    <h1>EOS Solutions NuGet Feeds for Business Central</h1>
+    <p>The URLs for the NuGet feeds are built in the following format:</p>
+    <pre><code>/{BC version}/{Type}</code></pre>
+    <p>Where <code>{BC version}</code> is the version of Business Central, and <code>{Type}</code> can be one of the following:</p>
+    <ul>
+        <li><strong>Release</strong>: No authentication required</li>
+        <li><strong>Prerelease</strong>: Requires MSAL authentication</li>
+        <li><strong>Test</strong>: Requires MSAL authentication</li>
+    </ul>
+    <p>For example, to access the NuGet feed for Business Central 25 Release, you would use the following URL:</p>
+    <pre><code>myawesomeeosapps.com/25/Release/index.json</code></pre>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        color: #555;
+    }
+    pre {
+        background-color: #eaeaea;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        background-color: #fff;
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    li strong {
+        color: #333;
+    }
+</style>
+</html>
