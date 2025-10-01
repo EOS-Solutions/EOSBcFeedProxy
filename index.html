@@ -57,14 +57,25 @@
                         </div>
                     </div>
 
-                    <div class="feed-card external">
+                    <div class="feed-card LSRetail">
                         <div class="card-icon">
-                            <i class="fas fa-external-link"></i>
+                            <i class="fas fa-cart-shopping"></i>
                         </div>
-                        <h3>External</h3>
+                        <h3>LS Retail</h3>
                         <p class="auth-status auth-required">Secured access - MSAL authentication required</p>
                         <div class="features">
-                            <span>Contains third-party apps and specialized packages. Access restricted to authorized users.</span>
+                            <span>Contains third-party apps from LS Retail. Access restricted to authorized users.</span>
+                        </div>
+                    </div>
+
+                    <div class="feed-card P365">
+                        <div class="card-icon">
+                            <i class="fas fa-gears"></i>
+                        </div>
+                        <h3>Project365</h3>
+                        <p class="auth-status auth-required">Secured access - MSAL authentication required</p>
+                        <div class="features">
+                            <span>Contains third-party apps from Kumavision for Project365. Access restricted to authorized users.</span>
                         </div>
                     </div>
                 </div>
@@ -94,6 +105,7 @@
                                 <div class="input-group">
                                     <label for="bc-version">Business Central Version:</label>
                                     <select id="bc-version" onchange="updateURL()">
+                                        <option value="27">27</option>
                                         <option value="26">26</option>
                                         <option value="25">25</option>
                                         <option value="24">24</option>
@@ -104,7 +116,8 @@
                                     <select id="feed-type" onchange="updateURL()">
                                         <option value="Release">Release</option>
                                         <option value="Prerelease">Prerelease</option>
-                                        <option value="External">External</option>
+                                        <option value="LSRetail">LSRetail</option>
+                                        <option value="P365">Project365</option>
                                     </select>
                                 </div>
                             </div>
@@ -384,8 +397,12 @@
         color: #E6A445;
     }
 
-    .external .card-icon {
-        color: #3f5bcc;
+    .LSRetail .card-icon {
+        color: #361d5c;
+    }
+    
+    .P365 .card-icon {
+        color: #253d63;
     }
 
     .feed-card h3 {
