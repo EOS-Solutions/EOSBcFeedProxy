@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOS Solutions NuGet Client</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/download.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 EOS Solutions NuGet Client</h1>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h3><span class="section-icon">🔗</span>Feed Configuration</h3>
+                <div class="form-group">
+                    <label for="feedUrl">NuGet Feed URL</label>
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="feedUrl" 
+                            placeholder="https://feed.eos-solutions.app/26/Release/index.json" 
+                            value="https://feed.eos-solutions.app/26/Release/index.json"
+                        >
+                        <button class="btn btn-primary" onclick="connectToFeed()">
+                            <span class="spinner" id="connectSpinner" style="display: none;"></span>
+                            <span id="connectText">Connect</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="feedStatus"></div>
+            </div>
+            
+            <div class="section">
+                <h3><span class="section-icon">📦</span>Apps</h3>
+                <div class="form-group">
+                    <label for="searchQuery">Filter Packages</label>
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="searchQuery" 
+                            placeholder="Enter package name to filter (leave empty to show all)" 
+                            onkeypress="handleSearchKeyPress(event)"
+                        >
+                        <button class="btn btn-primary" onclick="searchPackages()">
+                            🔍 Filter
+                        </button>
+                        <button class="btn btn-secondary" onclick="clearResults()">
+                            🗑️ Clear
+                        </button>
+                    </div>
+                </div>
+                <div id="results"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal-overlay">
+        <div class="modal">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="https://gordon.eos-solutions.it/img/generic.png" alt="Gordon Logo" style="max-width: 150px; height: auto; margin-bottom: 15px;">
+                <p style="font-style: italic; color: #F08019; font-weight: 600; font-size: 1.1rem; margin-bottom: 20px;">"Mustache the time, shave the trouble."</p>
+            </div>
+            <p>For a better package management experience, we recommend using <strong>Gordon</strong> - our dedicated package management tool.</p>
+            <p>Gordon provides advanced features for browsing, downloading, and managing NuGet packages with enhanced functionality and better user experience.</p>
+            <p>Visit our website to learn more: <a href="https://gordon.eos-solutions.it" target="_blank" style="color: #F08019; text-decoration: none; font-weight: 600;">https://gordon.eos-solutions.it</a></p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeDownloadModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="proceedWithDownload()">Continue Download</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/download.js"></script>
+</body>
+</html>
