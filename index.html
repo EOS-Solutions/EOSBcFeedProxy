@@ -23,7 +23,7 @@
         </header>
 
         <main class="main-content">
-            <section class="info-section">
+            <!-- <section class="info-section">
                 <div class="info-card">
                     <div class="card-header">
                         <i class="fas fa-info-circle"></i>
@@ -33,13 +33,14 @@
                         <p>All NuGet feed URLs follow a consistent structure to ensure easy access and integration:</p>
                         <div class="code-block">
                             <code>https://feed.eos-solutions.app/{BC version}/{Type}/index.json</code>
-                            <button class="copy-btn" onclick="copyToClipboard('https\:\/\/feed.eos-solutions.app/{BC version}/{Type}/index.json')">
+                            <button class="copy-btn"
+                                onclick="copyToClipboard('https\:\/\/feed.eos-solutions.app/{BC version}/{Type}/index.json')">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="feed-types">
                 <div class="section-divider">
@@ -55,7 +56,8 @@
                         <h3>Release</h3>
                         <p class="auth-status no-auth">Public access - no authentication required</p>
                         <div class="features">
-                            <span>Contains production-ready, stable versions of all EOS Apps for Business Central.</span>
+                            <span>Contains production-ready, stable versions of all EOS Apps for Business
+                                Central.</span>
                         </div>
                     </div>
 
@@ -66,7 +68,8 @@
                         <h3>LS Retail</h3>
                         <p class="auth-status auth-required">Secured access - MSAL authentication required</p>
                         <div class="features">
-                            <span>Contains third-party apps from LS Retail. Access restricted to authorized users.</span>
+                            <span>Contains third-party apps from LS Retail. Access restricted to authorized
+                                users.</span>
                         </div>
                     </div>
 
@@ -77,7 +80,8 @@
                         <h3>Project365</h3>
                         <p class="auth-status auth-required">Secured access - MSAL authentication required</p>
                         <div class="features">
-                            <span>Contains third-party apps from Kumavision for Project365. Access restricted to authorized users.</span>
+                            <span>Contains third-party apps from Kumavision for Project365. Access restricted to
+                                authorized users.</span>
                         </div>
                     </div>
                 </div>
@@ -87,15 +91,15 @@
                 <div class="example-card">
                     <div class="card-header">
                         <i class="fas fa-code"></i>
-                        <h2>Example Usage</h2>
+                        <h2>URL Format</h2>
                     </div>
                     <div class="card-content">
-                        <p>Here's how to construct a feed URL for Business Central version 26 Release packages:</p>
+                        <p>All NuGet feed URLs follow a consistent structure to ensure easy access and integration:</p>
                         <div class="url-example">
                             <div class="code-block example">
-                                <code id="example-url">https://feed.eos-solutions.app/26/Release/index.json</code>
+                                <code>https://feed.eos-solutions.app/{BC version}/{Type}/index.json</code>
                                 <button class="copy-btn"
-                                    onclick="copyToClipboard('https\:\/\/feed.eos-solutions.app/26/Release/index.json')">
+                                    onclick="copyToClipboard('https\:\/\/feed.eos-solutions.app/{BC version}/{Type}/index.json')">
                                     <i class="fas fa-copy"></i>
                                 </button>
                             </div>
@@ -133,11 +137,33 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div style="text-align: center; margin-top: 20px;">
+                            <img src="https://gordon.eos-solutions.it/img/generic.png" alt="Gordon Logo"
+                                style="max-width: 150px; height: auto; margin-bottom: 15px;">
+                            <p
+                                style="font-style: italic; color: #F08019; font-weight: 600; font-size: 1.1rem; margin-bottom: 20px;">
+                                "Mustache the time, shave the trouble."</p>
+                            <p>For a better package management experience, we recommend using <strong>Gordon</strong> -
+                                our
+                                dedicated package management tool.</p>
+                            <p>Gordon provides advanced features for browsing, downloading, and managing NuGet packages
+                                with
+                                enhanced functionality and better user experience.</p>
+                            <p>Visit our website to learn more: <a href="https://gordon.eos-solutions.it"
+                                    target="_blank"
+                                    style="color: #F08019; text-decoration: none; font-weight: 600;">https://gordon.eos-solutions.it</a>
+                            </p>
+                            <br>
+                            <br>
+                            <p>Want a direct download option? <a href="download.html" target="_blank"
+                                    style="color: #F08019; text-decoration: none; font-weight: 600;">Click here</a></p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            
+
             <section class="feed-types">
                 <div class="section-divider">
                     <span class="divider-text">

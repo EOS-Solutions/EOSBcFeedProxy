@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EOS Solutions NuGet Client</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="css/main.css" rel="stylesheet">
     <link href="css/download.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🚀 EOS Solutions NuGet Client</h1>
-        </div>
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-download"></i>
+                <h1>EOS Solutions NuGet Client</h1>
+            </div>
+        </header>
         
-        <div class="content">
-            <div class="section">
-                <h3><span class="section-icon">🔗</span>Feed Configuration</h3>
+        <main class="main-content">
+            <section class="section">
+                <div class="card-header">
+                    <i class="fas fa-link"></i>
+                    <h2>Feed Configuration</h2>
+                </div>
                 <div class="form-group">
                     <label for="feedUrl">NuGet Feed URL</label>
                     <div class="input-group">
@@ -33,10 +41,13 @@
                     </div>
                 </div>
                 <div id="feedStatus"></div>
-            </div>
+            </section>
             
-            <div class="section">
-                <h3><span class="section-icon">📦</span>Apps</h3>
+            <section class="section">
+                <div class="card-header">
+                    <i class="fas fa-cube"></i>
+                    <h2>Apps</h2>
+                </div>
                 <div class="form-group">
                     <label for="searchQuery">Filter Packages</label>
                     <div class="input-group">
@@ -47,16 +58,20 @@
                             onkeypress="handleSearchKeyPress(event)"
                         >
                         <button class="btn btn-primary" onclick="searchPackages()">
-                            🔍 Filter
+                            <i class="fas fa-search"></i> Filter
                         </button>
                         <button class="btn btn-secondary" onclick="clearResults()">
-                            🗑️ Clear
+                            <i class="fas fa-trash"></i> Clear
                         </button>
                     </div>
                 </div>
                 <div id="results"></div>
-            </div>
-        </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 EOS Solutions. All rights reserved.</p>
+        </footer>
     </div>
 
     <!-- Download Modal -->
